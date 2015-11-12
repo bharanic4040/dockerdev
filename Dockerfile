@@ -26,13 +26,15 @@ RUN chown ${uid}:${gid} -R /home/developer
 USER developer
 ENV HOME /home/developer
 
-RUN apt-get install -y firefox
+RUN sudo apt-get install -y firefox
 
-RUN apt-get install -y maven
+RUN sudo apt-get install -y maven
 
 ENV M2_HOME /usr/share/maven
 ENV M2 $M2_HOME/bin
 ENV PATH $M2:$PATH
 
 RUN sudo apt-get install -y mysql-server
+
+RUN apt-get install -y g++
 
