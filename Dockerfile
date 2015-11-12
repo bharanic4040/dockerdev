@@ -34,3 +34,5 @@ ENV M2_HOME /usr/share/maven
 ENV M2 $M2_HOME/bin
 ENV PATH $M2:$PATH
 
+RUN sudo apt-get install -y mysql-server
+
