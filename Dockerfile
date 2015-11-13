@@ -10,8 +10,17 @@ RUN sudo apt-get install -y git
 
 RUN sudo apt-get install -y dbus
 
-ADD eclipse-jee-kepler-SR2-linux-gtk-x86_64.tar.gz /opt/
+
+RUN sudo wget www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+
+RUN mv eclipse.tar.gz /opt/
+
+WORKDIR /opt
+
+RUN sudo tar xvf eclipse.tar.gz
+
 RUN sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
+
 
 # Replace 0 with your user / group id
 RUN export uid=1000 gid=1000
