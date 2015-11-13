@@ -39,15 +39,15 @@ RUN yum install -y firefox
 RUN yum install -y dbus
 
 
-RUN sudo wget www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
+RUN wget www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/kepler/R/eclipse-jee-kepler-R-linux-gtk-x86_64.tar.gz -O eclipse.tar.gz
 
 RUN mv eclipse.tar.gz /opt/
 
 WORKDIR /opt
 
-RUN sudo tar xvf eclipse.tar.gz
+RUN tar xvf eclipse.tar.gz
 
-RUN sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
+RUN ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
 
 
 
