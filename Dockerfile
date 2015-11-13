@@ -27,7 +27,7 @@ USER developer
 ENV HOME /home/developer
 
 RUN sudo apt-get install -y firefox
-
+RUN sudo apt-get install -y subversion
 RUN sudo apt-get install -y maven
 
 ENV M2_HOME /usr/share/maven
