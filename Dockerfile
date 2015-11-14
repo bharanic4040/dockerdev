@@ -46,4 +46,3 @@ ENV PATH $M2:$PATH
 RUN sudo apt-get install -y mysql-server
 
 RUN sudo apt-get install -y g++
-RUN sudo apt-get install -y rabbitmq-server
