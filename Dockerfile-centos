@@ -2,6 +2,8 @@
 
 FROM centos:6
 
+MAINTAINER Bharani Chennu bchennu@cisco.com
+
 ENV JAVA_VERSION 8u31
 ENV BUILD_VERSION b13
 
@@ -64,6 +66,10 @@ RUN chown ${uid}:${gid} -R /home/developer
 
 RUN dbus-uuidgen > /etc/machine-id
 
+RUN dbus-uuidgen >> /var/lib/dbus/machine-id
+
+
 USER developer
 ENV HOME /home/developer
+
 
