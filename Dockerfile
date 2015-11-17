@@ -6,8 +6,6 @@ MAINTAINER Bharani Chennu bchennu@cisco.com
 
 
 RUN sudo apt-get update
-RUN bash
-RUN sudo apt-get install -y --fix-missing openjdk-7-jdk
 
 RUN sudo apt-get install -y wget
 
