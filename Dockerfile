@@ -48,3 +48,5 @@ RUN sudo apt-get install -y mysql-server
 RUN sudo apt-get install -y subversion
 
 RUN sudo apt-get install -y g++
+
+RUN sudo apt-get install -y openssh-server
