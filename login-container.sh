@@ -1,13 +1,13 @@
 IMAGE_NAME=bharanic404/dev
 
-DOCKER_COMMAND="docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it -v `pwd`:/home/developer --name "
+DOCKER_COMMAND="sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -it -v `pwd`:/home/developer --name "
 CONTAINER=$1
 
-EXEC_COMMAND="docker exec -it $CONTAINER bash"
+EXEC_COMMAND="sudo docker exec -it $CONTAINER bash"
 LAUNCH_COMMAND="$DOCKER_COMMAND$CONTAINER $IMAGE_NAME"
-START_COMMAND="docker start $CONTAINER"
+START_COMMAND="sudo docker start $CONTAINER"
 
-RUNNING=$(docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
+RUNNING=$(sudo docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
 
 if [ $? -eq 1 ]; then
   echo "UNKNOWN - $CONTAINER does not exist."
