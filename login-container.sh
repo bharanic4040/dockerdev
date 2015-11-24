@@ -22,6 +22,5 @@ if [ "$RUNNING" == "false" ]; then
   $EXEC_COMMAND
   exit 0
 fi
-
 $EXEC_COMMAND
 exit 0
